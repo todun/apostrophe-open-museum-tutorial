@@ -16,14 +16,14 @@ We want to specify tools for our editors to use and classes to wrap the resultin
 
 ```javascript
 {{ apos.singleton(context, 'widgetName', 'apostrophe-rich-text', {
-toolbar: [ 'Styles', 'Bold', 'Italic', 'Blockquote', 'Link', 'Anchor', 'Unlink', 'NumberedList', 'BulletedList' ],
-styles: [
-  { name: 'Body Copy (P)', element: 'p', attributes: { class: 'o-body' } },
-  { name: 'Section Header (H2)', element: 'h2', attributes: { class: 'o-section-header' } },
-  { name: 'Headline (H3)', element: 'h3', attributes: { class: 'o-headline' } },
-  { name: 'Sub Headline (H4)', element: 'h4', attributes: { class: 'o-subheadline' } },
-  { name: 'Meta (P)', element: 'p', attributes: { class: 'o-meta' } }
-]
+  toolbar: [ 'Styles', 'Bold', 'Italic', 'Blockquote', 'Link', 'Anchor', 'Unlink', 'NumberedList', 'BulletedList' ],
+  styles: [
+    { name: 'Body Copy (P)', element: 'p', attributes: { class: 'o-body' } },
+    { name: 'Section Header (H2)', element: 'h2', attributes: { class: 'o-section-header' } },
+    { name: 'Headline (H3)', element: 'h3', attributes: { class: 'o-headline' } },
+    { name: 'Sub Headline (H4)', element: 'h4', attributes: { class: 'o-subheadline' } },
+    { name: 'Meta (P)', element: 'p', attributes: { class: 'o-meta' } }
+  ]
 } ) }}
 ```
 
