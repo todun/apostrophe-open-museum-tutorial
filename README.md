@@ -1,4 +1,5 @@
-# apostrophe-demo-2018-tutorial
+# ApostropheCMS Documentation
+
 WIP!! A step by step guide for developers about how to rebuild our new demo site from scratch.
 
 ## Draft Outline
@@ -37,3 +38,4 @@ WIP!! A step by step guide for developers about how to rebuild our new demo site
 32. sitewide-search.md
 33. using-helpers.md
 34. building-a-styleguide.md
+
