@@ -45,16 +45,16 @@ types: [
 ]
 ```
 {% hint style="warning" %}
-  In the above example, the `label` is what will display to the user, and the `name` refers to the `name` property within `artists-pieces-pages`. To learn more about adding custom page templates, see: [Adding A New Page Template](https://docs.apostrophecms.org/apostrophe/tutorials/getting-started/editing-page-templates#adding-a-new-page-template)
+  In the above example, the `label` is what will display to the user, and the `name` refers to the `name` property within `artists-pages`. To learn more about adding custom page templates, see: [Adding A New Page Template](https://docs.apostrophecms.org/apostrophe/tutorials/getting-started/editing-page-templates#adding-a-new-page-template)
 {% endhint %}
 
 ## Configuring basic views for Index and Show Pages
 
 {% hint style="note" %}
-  Out of the box, `artists-pages-pages` will inherit views from `apostrophe-pieces-pages`. However, you'll want to override this project level and provide your own custom markup.
+  Out of the box, `artists-pages` will inherit views from `apostrophe-pieces-pages`. However, you'll want to override this project level and provide your own custom markup.
 {% endhint %}
 
-In the root of the `artists-pieces-pages` module, create a `views` folder. Within that `views` folder, create both an `index.html` and `show.html` file. Apostrophe will look for these files, and (when available), display them as dedicated index and show page templates.
+In the root of the `artists-pages` module, create a `views` folder. Within that `views` folder, create both an `index.html` and `show.html` file. Apostrophe will look for these files, and (when available), display them as dedicated index and show page templates.
 
 {% hint style="note" %}
   Within your `index.html` file, you'll have access to all your Artist pieces automatically via `data.pieces`. Similarly, you'll have access to the individual piece via `data.piece` within the `show.html`.
@@ -128,5 +128,5 @@ In the corresponding `show.html`, copy the following markup:
 ```
 
 {% hint style="note" %}
-  The above markup will output basic meta information on the piece, as well as columns for areas that include base widgets. *Note that these areas are saved to the `piece` and not the `page`*. 
+  The above markup will output basic meta information on the piece, as well as columns for areas that include base widgets. *Note that these areas are saved to the `piece` and not the `page`*.
 {% endhint %}
