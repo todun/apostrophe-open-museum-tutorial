@@ -45,7 +45,7 @@ Above will get us visual styling at time of editing, but when refreshed will be 
 
 Apostrophe leverages `sanitize-html` to do this, full documentation at [sanitize-html](https://github.com/punkave/sanitize-html) on Github.
 
-**To white list our markup**
+To white list our markup create the following file:
 
 {% code-tabs %}
 {% code-tabs-item title="lib/modules/apostrophe-rich-text-widgets/index.js" %}
