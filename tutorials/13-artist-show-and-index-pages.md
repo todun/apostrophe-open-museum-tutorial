@@ -39,7 +39,7 @@ After you've added `artists-pages` to the `app.js` module configuration, you'll 
 types: [
   ...
   {
-    label: 'Artworks Index',
+    label: 'Artists Index',
     name: 'artwork-pages'
   }
 ]
@@ -130,3 +130,7 @@ In the corresponding `show.html`, copy the following markup:
 {% hint style="note" %}
   The above markup will output basic meta information on the piece, as well as columns for areas that include base widgets. *Note that these areas are saved to the `piece` and not the `page`*.
 {% endhint %}
+
+## Creating an Index page for Artists
+
+After following the steps above, you can now create a new page, and select the "Artists Index" as the page template. Visiting this newly created page will fetch the `index.html` file. For example, visiting `/artists` will display the index, and visiting `/artists/auguste-rodin` would fetch the show page. 
