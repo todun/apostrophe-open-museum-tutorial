@@ -4,6 +4,24 @@ Occasionally, we'll want to create a widget that has a self-contained layout wit
 
 You'll notice that we're using some helpers throughout this widget to aid in configuration of our sub-widgets and areas. For a more in-depth look at how to use helpers see [Using Helpers](https://stuartromanek.gitbook.io/open-museum/tutorials/33-using-helpers)
 
+## Initializing a new widget
+
+[Apostrophe CLI](https://github.com/apostrophecms/apostrophe-cli) lets you spin up boilerplate for new widgets fairly easily. Here we'll create a new widget using `apostrophe create-widget two-column`. This will give us all the files we need to get started.
+
+We'll want to create a reference to our new widget in `app.js`:
+
+```javascript
+modules: {
+  ...
+  'two-panel-widgets': { extend: 'apostrophe-widgets' },
+  ...
+}
+```
+
+## Configuring the schema for the widget
+
+Let's start by taking a look at our widget configuration (`index.js`):
+
 {% code-tabs %}
 {% code-tabs-item title="lib/modules/two-panel-widgets/index.js" %}
 ```javascript
@@ -55,6 +73,12 @@ module.exports = {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+One of the first thing you'll notice is that we're using `skipInitialModal: true`. This allows us to skip the widget manager modal when the widget is created and begin adding sub-widgets contextually right away, but preserves the Edit UI for later use. This is useful for secondary configuration, in this case our layout or `Configuration` option. This will allow us to change the orientation of content in our widget, but gives us a default to get started with.
+
+The non-configuration fields (`image` and `body`) within our `two-column` widget are both set to be edited contextually with `contextual: true`, so they will not appear in the manager modal for `two-column-widgets`.
+
+## Creating the view for the widget
+
 {% code-tabs %}
 {% code-tabs-item title="lib/modules/two-panel-widgets/views/widget.html" %}
 ```markup
@@ -79,6 +103,8 @@ module.exports = {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+## Widget styles
 
 {% code-tabs %}
 {% code-tabs-item title="lib/modules/apostrophe-assets/public/css/components/\_two-panel.less" %}
