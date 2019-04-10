@@ -35,6 +35,6 @@ node app
 
 Now navigating to [http://localhost:3000](http://localhost:3000) should show an empty Open Museum site.
 
-![An empty Open Museum](../media/01-getting-started_home.png)
+![An empty Open Museum](../.gitbook/assets/01-getting-started_home.png)
 
 Next, we'll create a home page and add widgets to it.
