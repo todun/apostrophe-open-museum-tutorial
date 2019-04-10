@@ -1,12 +1,14 @@
 # Set Up the Default Page
 
-Apostrophe requires that you have a `home.html` template, but when editors are creating new pages it could get confusing if they are all of the "home" page type. We should set up a "default" page type for pages other than the home page.
+Apostrophe requires that you have a `home.html` template, but when editors are creating new pages it could get confusing if they are all of the "Home" page type. We should set up a "Default" page type for pages other than the home page.
+
+## Adding the Default page type
 
 Fortunately on Open Museum the home page and default page templates are identical. In the same directory where we edited the `home.html`, `lib/modules/apostrophe-pages/views/pages`, copy `home.html` to a new file, `default.html`. (If you're immediately seeing this as duplicative, just keep reading.)
 
 Our template is all set up, but if you restart the app and create a new page, you'll see that "Home" is still the only page type available. We need to tell `apostrophe-pages` that we have a new page type in the app. Open the `index.js` file for `apostrophe-pages`. The only configuration you should see is a single object in the `types` array, which looks like:
 
-```js
+```javascript
 {
   name: 'home',
   label: 'Home'
@@ -15,7 +17,7 @@ Our template is all set up, but if you restart the app and create a new page, yo
 
 All we need to do to make the "default" page type available is to add it to the `types` array:
 
-```js
+```javascript
 types: [
   {
     name: 'home',
@@ -29,6 +31,8 @@ types: [
 ```
 
 Excellent! Now if you restart, you can create "Default"-type pages.
+
+## Reducing duplicated code with `extends`
 
 As suggested earlier, we're duplicating an entire template in our project right now. This sets us up for problems later where someone edits one but forgets to edit the other. Fortunately, Nunjucks makes reducing duplication pretty simple.
 
