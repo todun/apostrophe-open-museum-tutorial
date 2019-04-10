@@ -4,11 +4,13 @@ Apostrophe uses the [Nunjucks Templating engine](https://mozilla.github.io/nunju
 
 We're going to create an index page for our `People` piece that will use an `image` macro to render images for each person. There will be some logic in this macro to help parse out the image data inside the `apostrophe-images` singleton on each person.
 
-First, we'll create our macro file at `/views/macros.image.html`
+First, we'll create our macro file at `/views/macros/image.html`
 
 Next, let's define a function function called `render` with some parameters:
 
 ```markup
+// views/macros/image.html
+
 {% macro render(imageObj, options= {size: 'full', alt: false, description: false} ) %}
 
 {% endmacro %}
@@ -23,6 +25,8 @@ Next, let's flesh out the macro:
 
 
 ```markup
+// views/macros/image.html
+
 {% macro render(imageObj, options= {size: 'full', alt: false, description: false} ) %}
   {% set image = apos.images.first(imageObj) %}
   <div class="o-image__wrapper{% if options.class %} {{ options.class }}{% endif %}">
