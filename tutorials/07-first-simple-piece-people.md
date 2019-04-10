@@ -2,7 +2,7 @@
 
 Let's create a directory of people who work at the museum. People should be "global content" so they can be displayed across the site, so we'll need to create our own custom `people` module. To do this, we'll extend the core `apostrophe-pieces` module, which can be extended as many times as we need to create custom pieces throughout the project.
 
-Using the apostrophe cli, run `apostrophe create-piece people` to generate the boilerplate for your `people` module. In `lib/modules` you should see a new folder called `peoples` with an `index.js` file where you'll configure the schema for your new piece type. Note that apostrophe cli pluralizes pieces by adding an `s` when using `create-piece`. Let's edit this to use the appropriate pluralization of `people`.
+Using the apostrophe cli, run `apostrophe create-piece people --pages --widgets` to generate the boilerplate for your `people` module. In `lib/modules` you should see a new folder called `peoples` with an `index.js` file where you'll configure the schema for your new piece type. Note that apostrophe cli pluralizes pieces by adding an `s` when using `create-piece`. Let's edit this to use the appropriate pluralization of `people`.
 
 To do this, change the name of your new folder from `peoples` to `people` then  in `lib/modules/people/index.js` update the `name`, and `pluralLabel`. We'll `extend: 'apostrophe-pieces'` later in `app.js` so we can also remove that property from `lib/modules/people/index.js`, which should now look like this:
 
