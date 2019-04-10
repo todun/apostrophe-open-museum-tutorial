@@ -2,13 +2,9 @@
 
 In addition to placing pieces into you pages, you can also include them on pages as a widget. A piece widget is a special Apostrophe widget that easily gives users the ability to add one or more pieces to the page.
 
-To create a pieces widget, first, use the CLI to make a widget. Note that it must match the existing piece's name. Naming the widget after the piece's module name will create the association between this new widget and the data contained in the the Artworks' pieces.
+When we used the CLI to [create the artworks piece](link-to-previous-step) we used the `--widget` flag to also generate the files and folders needed for a piece-widget
 
-`apostrophe create-widget artworks-widget`
-
-QUESTION TO ANSWER: Is there a special [CLI](#link-to-cli?) command for piece widgets?
-
-This command creates a module directory named `artwork-widget` that contains `views/widget.html` and `index.js`
+That command creates a module directory named `artwork-widget` that contains `views/widget.html` and `index.js`
 
 ## Piece Widget Default fields
 
