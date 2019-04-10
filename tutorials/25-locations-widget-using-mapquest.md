@@ -200,6 +200,7 @@ With the above methods in place, we now have everything we need to manage our lo
 
 ## Configuring the Locations widget
 
+Now that we have our `location` piece type configured, we can move onto building out the `locations-widget` that we'll use to render the content.
 
 ## Rendering the Locations piece data on the widget via MapQuest
 
