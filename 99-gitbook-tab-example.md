@@ -1,5 +1,3 @@
-# Piece Widget - Artwork widget
-
 {% tabs %}
 {% tab title="HTML" %}
 {% code-tabs %}
@@ -75,6 +73,3 @@ $(function () {
 {% endcode-tabs %}
 {% endtab %}
 {% endtabs %}
-
-
-
