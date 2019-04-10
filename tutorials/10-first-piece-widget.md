@@ -60,4 +60,16 @@ We pull in the our custom widget `title` field (if it exists) as `{{ w.title }}`
 </div>
 ```
 
-Note: After we join the page document to the widget we will add that to the above view, as well.
+## Adding the widget to the page
+
+Now with widget's view created you can include your new widget in an area. In the demo project we do this via a special area helper method.
+
+```
+// lib/modules/helpers/lib/areas.js
+
+let narrowWidgets = {
+    ...
+    'artworks': {},
+    ...
+}
+```
