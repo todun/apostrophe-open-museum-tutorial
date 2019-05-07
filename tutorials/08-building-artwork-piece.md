@@ -2,6 +2,7 @@
 
 - What this piece is and what the fields are going to cover (context for the schema)
 - Create new piece with CLI, including page and widget flag (quick note about widget flag)
+- Activate the module in app.js.
 - Add the schema, leaving the artist join off for now (it doesn't exist yet)
   - Brief note on joins, linking over to guide to schema
   - Note that we're joining to two pre-existing piece types in the start files. A quick note about using pieces for taxonomy ("category-object") and note that locations will be discussed more when building out the related widget.
